@@ -1,4 +1,5 @@
 <?php namespace Aliyun\IOT\Request;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,53 +20,63 @@
  */
 use Aliyun\Core\RpcAcsRequest;
 
-class RevertRpcRequest extends RpcAcsRequest {
-	function __construct() {
-		parent::__construct("Iot", "2016-01-04", "RevertRpc");
-	}
+class RevertRpcRequest extends RpcAcsRequest
+{
+    function __construct()
+    {
+        parent::__construct("Iot", "2016-01-04", "RevertRpc");
+    }
 
-	private $appKey;
+    private $appKey;
 
-	private $deviceId;
+    private $deviceId;
 
-	private $rpcContent;
+    private $rpcContent;
 
-	private $timeOut;
+    private $timeOut;
 
-	public function getAppKey() {
-		return $this->appKey;
-	}
+    public function getAppKey()
+    {
+        return $this->appKey;
+    }
 
-	public function setAppKey($appKey) {
-		$this->appKey = $appKey;
-		$this->queryParameters["AppKey"] = $appKey;
-	}
+    public function setAppKey($appKey)
+    {
+        $this->appKey = $appKey;
+        $this->queryParameters["AppKey"] = $appKey;
+    }
 
-	public function getDeviceId() {
-		return $this->deviceId;
-	}
+    public function getDeviceId()
+    {
+        return $this->deviceId;
+    }
 
-	public function setDeviceId($deviceId) {
-		$this->deviceId = $deviceId;
-		$this->queryParameters["DeviceId"] = $deviceId;
-	}
+    public function setDeviceId($deviceId)
+    {
+        $this->deviceId = $deviceId;
+        $this->queryParameters["DeviceId"] = $deviceId;
+    }
 
-	public function getRpcContent() {
-		return $this->rpcContent;
-	}
+    public function getRpcContent()
+    {
+        return $this->rpcContent;
+    }
 
-	public function setRpcContent($rpcContent) {
-		$this->rpcContent = $rpcContent;
-		$this->queryParameters["RpcContent"] = $rpcContent;
-	}
+    public function setRpcContent($rpcContent)
+    {
+        $this->rpcContent = $rpcContent;
+        $this->queryParameters["RpcContent"] = $rpcContent;
+    }
 
-	public function getTimeOut() {
-		return $this->timeOut;
-	}
+    public function getTimeOut()
+    {
+        return $this->timeOut;
+    }
 
-	public function setTimeOut($timeOut) {
-		$this->timeOut = $timeOut;
-		$this->queryParameters["TimeOut"] = $timeOut;
-	}
+    public function setTimeOut($timeOut)
+    {
+        $this->timeOut = $timeOut;
+        $this->queryParameters["TimeOut"] = $timeOut;
+    }
 
 }

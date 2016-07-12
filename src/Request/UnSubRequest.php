@@ -1,4 +1,5 @@
 <?php namespace Aliyun\IOT\Request;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,42 +20,50 @@
  */
 use Aliyun\Core\RpcAcsRequest;
 
-class UnSubRequest extends RpcAcsRequest {
-	function __construct() {
-		parent::__construct("Iot", "2016-01-04", "UnSub");
-	}
+class UnSubRequest extends RpcAcsRequest
+{
+    function __construct()
+    {
+        parent::__construct("Iot", "2016-01-04", "UnSub");
+    }
 
-	private $topic;
+    private $topic;
 
-	private $appKey;
+    private $appKey;
 
-	private $topicList;
+    private $topicList;
 
-	public function getTopic() {
-		return $this->topic;
-	}
+    public function getTopic()
+    {
+        return $this->topic;
+    }
 
-	public function setTopic($topic) {
-		$this->topic = $topic;
-		$this->queryParameters["Topic"] = $topic;
-	}
+    public function setTopic($topic)
+    {
+        $this->topic = $topic;
+        $this->queryParameters["Topic"] = $topic;
+    }
 
-	public function getAppKey() {
-		return $this->appKey;
-	}
+    public function getAppKey()
+    {
+        return $this->appKey;
+    }
 
-	public function setAppKey($appKey) {
-		$this->appKey = $appKey;
-		$this->queryParameters["AppKey"] = $appKey;
-	}
+    public function setAppKey($appKey)
+    {
+        $this->appKey = $appKey;
+        $this->queryParameters["AppKey"] = $appKey;
+    }
 
-	public function getTopicList() {
-		return $this->topicList;
-	}
+    public function getTopicList()
+    {
+        return $this->topicList;
+    }
 
-	public function setTopicList($topicList) {
-		$this->topicList = $topicList;
-		$this->queryParameters["TopicList"] = $topicList;
-	}
+    public function setTopicList($topicList)
+    {
+        $this->topicList = $topicList;
+        $this->queryParameters["TopicList"] = $topicList;
+    }
 
 }

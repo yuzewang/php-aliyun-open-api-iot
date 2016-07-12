@@ -1,4 +1,5 @@
 <?php namespace Aliyun\IOT\Request;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,42 +20,50 @@
  */
 use Aliyun\Core\RpcAcsRequest;
 
-class PubRequest extends RpcAcsRequest {
-	function __construct() {
-		parent::__construct("Iot", "2016-01-04", "Pub");
-	}
+class PubRequest extends RpcAcsRequest
+{
+    function __construct()
+    {
+        parent::__construct("Iot", "2016-01-04", "Pub");
+    }
 
-	private $appKey;
+    private $appKey;
 
-	private $topicFullName;
+    private $topicFullName;
 
-	private $messageContent;
+    private $messageContent;
 
-	public function getAppKey() {
-		return $this->appKey;
-	}
+    public function getAppKey()
+    {
+        return $this->appKey;
+    }
 
-	public function setAppKey($appKey) {
-		$this->appKey = $appKey;
-		$this->queryParameters["AppKey"] = $appKey;
-	}
+    public function setAppKey($appKey)
+    {
+        $this->appKey = $appKey;
+        $this->queryParameters["AppKey"] = $appKey;
+    }
 
-	public function getTopicFullName() {
-		return $this->topicFullName;
-	}
+    public function getTopicFullName()
+    {
+        return $this->topicFullName;
+    }
 
-	public function setTopicFullName($topicFullName) {
-		$this->topicFullName = $topicFullName;
-		$this->queryParameters["TopicFullName"] = $topicFullName;
-	}
+    public function setTopicFullName($topicFullName)
+    {
+        $this->topicFullName = $topicFullName;
+        $this->queryParameters["TopicFullName"] = $topicFullName;
+    }
 
-	public function getMessageContent() {
-		return $this->messageContent;
-	}
+    public function getMessageContent()
+    {
+        return $this->messageContent;
+    }
 
-	public function setMessageContent($messageContent) {
-		$this->messageContent = $messageContent;
-		$this->queryParameters["MessageContent"] = $messageContent;
-	}
+    public function setMessageContent($messageContent)
+    {
+        $this->messageContent = $messageContent;
+        $this->queryParameters["MessageContent"] = $messageContent;
+    }
 
 }

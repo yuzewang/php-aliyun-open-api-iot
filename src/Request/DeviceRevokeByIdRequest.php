@@ -1,4 +1,5 @@
 <?php namespace Aliyun\IOT\Request;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,42 +20,50 @@
  */
 use Aliyun\Core\RpcAcsRequest;
 
-class DeviceRevokeByIdRequest extends RpcAcsRequest {
-	function __construct() {
-		parent::__construct("Iot", "2016-01-04", "DeviceRevokeById");
-	}
+class DeviceRevokeByIdRequest extends RpcAcsRequest
+{
+    function __construct()
+    {
+        parent::__construct("Iot", "2016-01-04", "DeviceRevokeById");
+    }
 
-	private $appKey;
+    private $appKey;
 
-	private $ruleId;
+    private $ruleId;
 
-	private $deviceId;
+    private $deviceId;
 
-	public function getAppKey() {
-		return $this->appKey;
-	}
+    public function getAppKey()
+    {
+        return $this->appKey;
+    }
 
-	public function setAppKey($appKey) {
-		$this->appKey = $appKey;
-		$this->queryParameters["AppKey"] = $appKey;
-	}
+    public function setAppKey($appKey)
+    {
+        $this->appKey = $appKey;
+        $this->queryParameters["AppKey"] = $appKey;
+    }
 
-	public function getRuleId() {
-		return $this->ruleId;
-	}
+    public function getRuleId()
+    {
+        return $this->ruleId;
+    }
 
-	public function setRuleId($ruleId) {
-		$this->ruleId = $ruleId;
-		$this->queryParameters["RuleId"] = $ruleId;
-	}
+    public function setRuleId($ruleId)
+    {
+        $this->ruleId = $ruleId;
+        $this->queryParameters["RuleId"] = $ruleId;
+    }
 
-	public function getDeviceId() {
-		return $this->deviceId;
-	}
+    public function getDeviceId()
+    {
+        return $this->deviceId;
+    }
 
-	public function setDeviceId($deviceId) {
-		$this->deviceId = $deviceId;
-		$this->queryParameters["DeviceId"] = $deviceId;
-	}
+    public function setDeviceId($deviceId)
+    {
+        $this->deviceId = $deviceId;
+        $this->queryParameters["DeviceId"] = $deviceId;
+    }
 
 }

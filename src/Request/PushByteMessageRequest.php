@@ -1,4 +1,5 @@
 <?php namespace Aliyun\IOT\Request;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,42 +20,50 @@
  */
 use Aliyun\Core\RpcAcsRequest;
 
-class PushByteMessageRequest extends RpcAcsRequest {
-	function __construct() {
-		parent::__construct("Iot", "2016-01-04", "PushByteMessage");
-	}
+class PushByteMessageRequest extends RpcAcsRequest
+{
+    function __construct()
+    {
+        parent::__construct("Iot", "2016-01-04", "PushByteMessage");
+    }
 
-	private $appKey;
+    private $appKey;
 
-	private $deviceIds;
+    private $deviceIds;
 
-	private $pushContent;
+    private $pushContent;
 
-	public function getAppKey() {
-		return $this->appKey;
-	}
+    public function getAppKey()
+    {
+        return $this->appKey;
+    }
 
-	public function setAppKey($appKey) {
-		$this->appKey = $appKey;
-		$this->queryParameters["AppKey"] = $appKey;
-	}
+    public function setAppKey($appKey)
+    {
+        $this->appKey = $appKey;
+        $this->queryParameters["AppKey"] = $appKey;
+    }
 
-	public function getDeviceIds() {
-		return $this->deviceIds;
-	}
+    public function getDeviceIds()
+    {
+        return $this->deviceIds;
+    }
 
-	public function setDeviceIds($deviceIds) {
-		$this->deviceIds = $deviceIds;
-		$this->queryParameters["DeviceIds"] = $deviceIds;
-	}
+    public function setDeviceIds($deviceIds)
+    {
+        $this->deviceIds = $deviceIds;
+        $this->queryParameters["DeviceIds"] = $deviceIds;
+    }
 
-	public function getPushContent() {
-		return $this->pushContent;
-	}
+    public function getPushContent()
+    {
+        return $this->pushContent;
+    }
 
-	public function setPushContent($pushContent) {
-		$this->pushContent = $pushContent;
-		$this->queryParameters["PushContent"] = $pushContent;
-	}
+    public function setPushContent($pushContent)
+    {
+        $this->pushContent = $pushContent;
+        $this->queryParameters["PushContent"] = $pushContent;
+    }
 
 }

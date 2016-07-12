@@ -1,4 +1,5 @@
 <?php namespace Aliyun\IOT\Request;
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,22 +20,26 @@
  */
 use Aliyun\Core\RpcAcsRequest;
 
-class RegistDeviceRequest extends RpcAcsRequest {
-	public function __construct() {
-		parent::__construct("Iot", "2016-05-30", "RegistDevice");
-	}
+class RegistDeviceRequest extends RpcAcsRequest
+{
+    public function __construct()
+    {
+        parent::__construct("Iot", "2016-05-30", "RegistDevice");
+    }
 
-	private $productKey;
-	private $deviceName;
+    private $productKey;
+    private $deviceName;
 
-	public function setProductKey($productKey) {
-		$this->productKey = $productKey;
-		$this->queryParameters["ProductKey"] = $productKey;
-	}
+    public function setProductKey($productKey)
+    {
+        $this->productKey = $productKey;
+        $this->queryParameters["ProductKey"] = $productKey;
+    }
 
-	public function setDeviceName($deviceName) {
-		$this->deviceName = $deviceName;
-		$this->queryParameters["DeviceName"] = $deviceName;
-	}
+    public function setDeviceName($deviceName)
+    {
+        $this->deviceName = $deviceName;
+        $this->queryParameters["DeviceName"] = $deviceName;
+    }
 
 }
