@@ -17,7 +17,7 @@ The IOT SDK for Aliyun OpenAPI
 Via Composer
 
 ``` bash
-$composer require yuzewang/aliyun-open-api-iot:dev-master
+$composer require yuzewang/aliyun-open-api-iot
 ```
 
 ## Usage
