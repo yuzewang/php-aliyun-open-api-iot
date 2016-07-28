@@ -24,12 +24,12 @@ class SubRequest extends RpcAcsRequest
 {
     function __construct()
     {
-        parent::__construct("Iot", "2016-01-04", "Sub");
+        parent::__construct("Iot", "2016-05-30", "Sub");
     }
 
     private $topic;
 
-    private $appKey;
+    private $productKey;
 
     private $subCallback;
 
@@ -46,15 +46,15 @@ class SubRequest extends RpcAcsRequest
         $this->queryParameters["Topic"] = $topic;
     }
 
-    public function getAppKey()
+    public function getProductKey()
     {
-        return $this->appKey;
+        return $this->productKey;
     }
 
-    public function setAppKey($appKey)
+    public function setProductKey($productKey)
     {
-        $this->appKey = $appKey;
-        $this->queryParameters["AppKey"] = $appKey;
+        $this->productKey = $productKey;
+        $this->queryParameters["ProductKey"] = $productKey;
     }
 
     public function getSubCallback()

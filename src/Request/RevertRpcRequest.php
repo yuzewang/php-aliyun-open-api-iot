@@ -24,37 +24,37 @@ class RevertRpcRequest extends RpcAcsRequest
 {
     function __construct()
     {
-        parent::__construct("Iot", "2016-01-04", "RevertRpc");
+        parent::__construct("Iot", "2016-05-30", "RevertRpc");
     }
 
-    private $appKey;
+    private $productKey;
 
-    private $deviceId;
+    private $deviceName;
 
     private $rpcContent;
 
     private $timeOut;
 
-    public function getAppKey()
+    public function getProductKey()
     {
-        return $this->appKey;
+        return $this->productKey;
     }
 
-    public function setAppKey($appKey)
+    public function setProductKey($productKey)
     {
-        $this->appKey = $appKey;
-        $this->queryParameters["AppKey"] = $appKey;
+        $this->productKey = $productKey;
+        $this->queryParameters["ProductKey"] = $productKey;
     }
 
-    public function getDeviceId()
+    public function getDeviceName()
     {
-        return $this->deviceId;
+        return $this->deviceName;
     }
 
-    public function setDeviceId($deviceId)
+    public function setDeviceName($deviceName)
     {
-        $this->deviceId = $deviceId;
-        $this->queryParameters["DeviceId"] = $deviceId;
+        $this->deviceName = $deviceName;
+        $this->queryParameters["DeviceName"] = $deviceName;
     }
 
     public function getRpcContent()

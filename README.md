@@ -23,6 +23,13 @@ $composer require yuzewang/aliyun-open-api-iot
 ## Usage
 
 ```php
+use Aliyun\Core\Regions\Endpoint;
+use Aliyun\Core\Regions\EndpointConfig;
+use Aliyun\Core\Regions\EndpointProvider;
+use Aliyun\Core\Profile\DefaultProfile;
+use Aliyun\IOT\Request\RegistDeviceRequest;
+use Aliyun\Core\DefaultAcsClient;
+
 /**
  * 访问信息
  */

@@ -30,10 +30,20 @@ class RegistDeviceRequest extends RpcAcsRequest
     private $productKey;
     private $deviceName;
 
+    public function getProductKey()
+    {
+        return $this->productKey;
+    }
+
     public function setProductKey($productKey)
     {
         $this->productKey = $productKey;
         $this->queryParameters["ProductKey"] = $productKey;
+    }
+
+    public function getDeviceName()
+    {
+        return $this->deviceName;
     }
 
     public function setDeviceName($deviceName)

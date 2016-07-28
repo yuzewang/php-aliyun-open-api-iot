@@ -20,16 +20,29 @@
  */
 use Aliyun\Core\RpcAcsRequest;
 
-class ListDevicePermitsRequest extends RpcAcsRequest
+class SubTopicFilterRequest extends \RpcAcsRequest
 {
     function __construct()
     {
-        parent::__construct("Iot", "2016-05-30", "ListDevicePermits");
+        parent::__construct("Iot", "2016-05-30", "SubTopicFilter");
     }
+
+    private $topic;
 
     private $productKey;
 
-    private $deviceName;
+    private $subCallback;
+
+    public function getTopic()
+    {
+        return $this->topic;
+    }
+
+    public function setTopic($topic)
+    {
+        $this->topic = $topic;
+        $this->queryParameters["Topic"] = $topic;
+    }
 
     public function getProductKey()
     {
@@ -42,15 +55,15 @@ class ListDevicePermitsRequest extends RpcAcsRequest
         $this->queryParameters["ProductKey"] = $productKey;
     }
 
-    public function getDeviceName()
+    public function getSubCallback()
     {
-        return $this->deviceName;
+        return $this->subCallback;
     }
 
-    public function setDeviceName($deviceName)
+    public function setSubCallback($subCallback)
     {
-        $this->deviceName = $deviceName;
-        $this->queryParameters["DeviceName"] = $deviceName;
+        $this->subCallback = $subCallback;
+        $this->queryParameters["SubCallback"] = $subCallback;
     }
 
 }
